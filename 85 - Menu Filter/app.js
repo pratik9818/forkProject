@@ -107,7 +107,7 @@ function diplayMenuItems(menuItems) {
         </article>`;
   });
   displayMenu = displayMenu.join("");
-  // console.log(displayMenu);
+  console.log(displayMenu);
 
   sectionCenter.innerHTML = displayMenu;
 }
