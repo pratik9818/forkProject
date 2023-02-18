@@ -107,7 +107,7 @@ function diplayMenuItems(menuItems) {
         </article>`;
   });
   displayMenu = displayMenu.join("");
-  console.log(displayMenu);
+  // console.log(displayMenu);
 
   sectionCenter.innerHTML = displayMenu;
 }
@@ -141,8 +141,10 @@ function displayMenuButtons() {
         // console.log(menuItem.category);
         if (menuItem.category === category) {
           return menuItem;
+          // console.log(menuItem);
         }
       });
+      // console.log(menuCategory);
       if (category === "all") {
         diplayMenuItems(menu);
       } else {
