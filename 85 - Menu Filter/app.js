@@ -111,17 +111,13 @@ function diplayMenuItems(menuItems) {
 
   sectionCenter.innerHTML = displayMenu;
 }
+let btnArray = []
 function displayMenuButtons() {
-  const categories = menu.reduce(
-    function (values, item) {
-      if (!values.includes(item.category)) {
-        values.push(item.category);
-      }
-      return values;
-    },
-    ["all"]
-  );
-  const categoryBtns = categories
+  for (let i = 0; i < menu.length; i++) {
+     if(!btnArray.includes(menu[i].category))
+     btnArray.push(menu[i].category)
+  }
+  const categoryBtns = btnArray
     .map(function (category) {
       return `<button type="button" class="filter-btn" data-id=${category}>
           ${category}
